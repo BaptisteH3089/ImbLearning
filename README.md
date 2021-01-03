@@ -103,7 +103,7 @@ The main issue that we have to care about when we want to combine oversampling a
 Oversampling strategies presented above are performing well most of the time. However, duplicating examples do not bring any information. It only gives more weight to minority class observations which can sometimes leads to overfitting.  
 __Synthetic Minority Oversampling Technique__ is a method which consits in "creating" new observations on the basis of the observed ones. It basically get examples of the minority class that are close in the same feature space, draw a line between them and create new observations from points that are on this line.  
 
-
+![SMOTE](Img/SMOTE.png)
 
 
 ## Results obtained with each method on each dataset
