@@ -4,15 +4,16 @@
 
 Imbalance is a very common issue in classification problems. It is inherent to some areas like anomaly detection, diagnosis, spam detection or insurance claims among others. The issue in the imbalanced case is that most classification algorithms are doing maximization of the accuracy or a similar measure and if the ratio of the data is 99:1, it will very certainly only predict the majority class and shows an accuracy of 99%, whereas the algorithm is not doing anything at all. First, it is necessary to use a different metric adapted to this kind of problem like the f1-score or the AUC or the area below the ROC (Receiving Operator Characteristic) curve.
 The f1-score is:
-![f1-score](Img/f1-score.png)
+
+<img src="Img/f1-score.png" alt="f1-score" width="400">
 
 with
 
-![precision](Img/precision.png)
+<img src="Img/precision.png" alt="precision" width="400">
 
 and
 
-![recall](Img/recall.png)
+<img src="Img/recall.png" alt="recall" width="400">
 
 ![AUC](Img/ROC.png)
 
@@ -72,15 +73,15 @@ Illustration of the undersampling process in the Cluster Centroids algorithm
 The Support Vector Machine algorithm looks for an hyperplane which leads to the best separation between the classes. Without adjustments SVM are not very effective in the imbalanced case, but when the errors in the majority class are weighted more heavily we can get very satisfying results.
 The SVM minimizes the risk of the hinge loss
 
-![Cluster Centroids](Img/loss_fcn.png)
+<img src="Img/loss_fcn.png" alt="loss function" width="300">
 
 In the cost-sensitive case, it leads to the following cost-sensitive loss function.
 
-![Cluster Centroids](Img/loss_complicated.png)
+![Loss function cost-sensitive](Img/loss_complicated.png)
 
 We can adjust the value of C(i). With the function above, the bigger C(1), the bigger the weight for misclassified 1 and  the bigger C(-1), the bigger the weight for misclassified -1.
 
-![Cluster Centroids](Img/SVM.png)
+![SVMs](Img/SVM.png)
 
 Illustration of the weighted SVM versus non weighted SVM
 
