@@ -89,7 +89,21 @@ The decision trees or random forest algorithms often perform well on an imbalanc
 
 ### Oversampling  
 
-The oversampling 
+Oversampling is a method which consists in duplicating observations that are in the minority class. It can be done in 2 ways:  
+
+- Either we duplicate them untill we obtain the same number of observations in the majority class and in the minority class  
+- Either we duplicate them untill we reach a wanted ratio (for example, a case where we would like 500 observations of the minority class for 1000 observations in the majority class)  
+
+We will see in our project that the oversampling strategy is important and can leads to really different results.  
+
+The main issue that we have to care about when we want to combine oversampling and cross validation, is to not oversample before getting the cross validation splits. Indeed, by doing so, we would duplicate minority class observations on the test set. Thus we would get some good results, but biased.  
+
+### SMOTE  
+
+Oversampling strategies presented above are performing well most of the time. However, duplicating examples do not bring any information. It only gives more weight to minority class observations which can sometimes leads to overfitting.  
+__Synthetic Minority Oversampling Technique__ is a method which consits in "creating" new observations on the basis of the observed ones. It basically get examples of the minority class that are close in the same feature space, draw a line between them and create new observations from points that are on this line.  
+
+
 
 
 ## Results obtained with each method on each dataset
