@@ -87,6 +87,11 @@ Illustration of the weighted SVM versus non weighted SVM
 
 The decision trees or random forest algorithms often perform well on an imbalanced dataset due to the splitting rule that can force both classes to be addressed. But it is also possible to use cost-sensitive decision trees to reach better results.
 
+### Oversampling  
+
+The oversampling 
+
+
 ## Results obtained with each method on each dataset
 
 ## Conclusion
