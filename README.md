@@ -165,10 +165,10 @@ Here we implement the same methods but note that we are not going under 33% beca
 
 | Oversampling strategy | F1 score | Precision | Recall |
 |-                      |-         |-          |-       |
-| No oversampling       | 0        | 0         | 0      |
-| Minority criterion    | 0.5096   | 0.3435    | 0.9864 |
-| Ratio = 0.5           | 0.5558   | 0.4040    | 0.8904 |  
-| Ratio = 0.33          | 0        | 0         | 0      |
+| No oversampling       | 0.4452   | 0.5076    | 0.3964 |
+| Minority criterion    | 0.5258   | 0.4882    | 0.5697 |
+| Ratio = 0.5           | 0.5221   | 0.4946    | 0.5309 |  
+| Ratio = 0.33          | 0.4892   | 0.4989    | 0.5000 |
 
 
 ### For undersampling strategies
