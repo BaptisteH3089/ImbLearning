@@ -172,7 +172,7 @@ Confusion matrix with Random Undersampling
 
 <img src="Img/CF_CC_rd.png" alt="CF_CC_rd" width="200">
 
-These confusion matrix show us that even though the Tomek Links method gives a good f1-score, it does not improve much the classification on the minority class, whereas the Near Miss version 1 and 3 are improving a lot the proportion of True Positives.
+These confusion matrix show us that even though the Tomek Links method gives a good f1-score, it does not improve much the classification on the minority class, whereas the Near Miss version 1 and 3 are improving a bit the proportion of True Positives.
 
 ### For cost-sensitive SVM
 
@@ -239,10 +239,13 @@ Confusion matrix with Random Undersampling
 
 <img src="Img/CF_rd.png" alt="CF_rd" width="200">
 
-We can see that with NM1 and NM3 even though the f1-score is worse than without resampling, we are predicting a lot better the True Positives. These methods are efficient. Tomek links and Random undersampling improve also the precision but less than NM algorithm.
+We can see that with NM1 and NM3 even though the f1-score is worse than without resampling, we are predicting a lot better the True Positives. This has a price because it increase a lot the number of False Positives. The last two methods are quite efficient to improve the score on the minority class. Tomek links and Random undersampling improve also the precision but less than NM algorithm.
 
 
 ## Conclusion
+
+We have seen that the resampling methods can improve quite a lot the proportion of well-predicted observations of the minority class, but in general it involves doing some errors on an other side. Methods based on trees and especially the Random Forest Classifier are very well-adapted to this task of imbalanced learning. Ensemble methods like Bagging of trees are also showing interesting results. Overall the algorithm to choose seems to depend a lot on the dataset and the classification problem to deal with. Resampling methods are very promising but they require the datascientist to adapt his methods to the dataset.
+
 
 ## Bibliography
 
