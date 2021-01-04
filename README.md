@@ -25,20 +25,6 @@ A different approach is to use resampling methods that aim to artificially get a
 
 ## Datasets chosen
 
-### Links to the datasets
-
-#### Credit Card Fraud
-
-https://www.kaggle.com/mlg-ulb/creditcardfraud
-
-#### Wine Quality
-
-https://www.kaggle.com/rajyellow46/wine-quality?select=winequalityN.csv
-
-#### Insurance Claims
-
-https://www.kaggle.com/arashnic/imbalanced-data-practice
-
 ### Credit Card
 We have a dataset about credit card frauds with the data of 284797 individuals. There are only 482 frauds in this dataset, so the ration is close to 600:1. It is a binary problem where we have to find abnormal variables.
 Insurance claims
@@ -46,9 +32,9 @@ The goal with this dataset is to predict whether a client would be interested in
 
 
 
-| Insurance Claim |interested | not interested |
-|----------- | --------|------ |
-|Number of individuals| 62531 | 319594 |
+|interested | not interested |
+----------- | -------------- |
+| 62531 | 319594 |
 
 
 ### Wine quality
@@ -68,9 +54,7 @@ The simplest way to do resampling is to do random resampling but in case of unde
 However there exists more sophisticated methods to lower the defaults of this method. A famous undersampling method is Tomek Links.
 It consists in creating pairs of points with each pair containing a point from the minority class and a point from the majority class. Then, we simply remove the points of the majority class on some pairs to reach the ratio we want. It gives a cleaner separation between the two classes and hopefully better results.
 
-<img src="Img/Img/TL_1.png" alt="TL" width="400">
-
-<img src="Img/Img/TL_2.png" alt="TL" width="400">
+![TomekLink](Img/TL_1.png) ![TomekLink](Img/TL_2.png)
 
 Illustration of the undersampling process in the Tomek Links algorithms
 
@@ -134,10 +118,10 @@ On all the following, we will use at first a _RandomForestClassifier_ to see how
 
 - __Credit card dataset__
 
-First, we get the 5 train and test set on which we will perform cross validation. Then we decide to run our model (_RandomForestClassifier_) on the data without using overampling to see what are the scores. This will be our basis to compare our other method with oversampling. Indeed, we want some better results than this one.  
-To perform oversampling, we decide to use the _minority_ argument of the function _RandomOverSample()_. This parameter duplicates observations of the minority class untill we obtain the same number of observation in each class. Note that we only duplicate observations of the train set and not of the test set. 
+First, we get the 5 train and test set on which we will perform cross validation. Then we decide to run our model (_RandomForestClassifier_) on the data without using overampling to see what are the scores. This will be our basis to compare our other methods with oversampling. Indeed, we want some better results than this one.  
+To perform oversampling, we decide to use the _minority_ argument of the function _RandomOverSample()_. This parameter duplicates observations of the minority class untill we obtain the same number of observation in each class. Note that we only duplicate observations of the train set and not of the test set.  
+Then, we try to implement different strategies like fixing a certain ratio of minority class observations that we want compared to majority class ones in our train set. Results that we obtain are shown below: 
 
-### For undersampling strategies
 
 
 
