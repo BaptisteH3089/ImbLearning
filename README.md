@@ -53,7 +53,7 @@ The goal with this dataset is to predict whether a client would be interested in
 
 ### Wine quality
 
-The third dataset is about wine quality. We have to do a multi-classification task as we have 6 possible classes distributed as below.
+The third dataset is about wine quality. We have to do a multi-classification task as we have 7 possible classes distributed as below.
 
 |Wine Quality | 3 | 4 | 5 | 6 | 7 | 8 | 9 |
 |------------ |-- |-- |---|---|---|---|---|
@@ -172,11 +172,15 @@ Confusion matrix with Random Undersampling
 
 <img src="Img/CF_CC_rd.png" alt="CF_CC_rd" width="200">
 
+These confusion matrix show us that even though the Tomek Links method gives a good f1-score, it does not improve much the classification on the minority class, whereas the Near Miss version 1 and 3 are improving a lot the proportion of True Positives.
+
 ### For cost-sensitive SVM
 
 | F1-score | Normal | Weighted 1:10 | Weighted 1:50 |
 |----------|--------|---------------|---------------|
 |          |0.50|0.77|0.80|
+
+The cost-sensitive SVM also yield good results. The results are better as we increase the weight on the minority class but it takes a lot of time. That's why we stop at the ratio 1:50
 
 #### Wine Quality Dataset
 
@@ -185,10 +189,14 @@ With this dataset we are in a case of multiclassification , so a more adapted me
 ###### Classic Methods
 
 |              | Logistic Regression | Decision Trees | GaussianNB | SVC | Random Forest Classifier |
-|-             |-                    |-               |-            |-    |--------------------------|
+|-             |-                    |-               |-           |-    |--------------------------|
 | accuracy     | 0.5382 | 0.5583 | 0.2815 | 0.5313 | 0.668 |
 
+As expected, the Random Forest Classifier yields the best results. Almost 67% of accuracy on this dataset with 6 classes is rather good. A way to improve the classification would be to reduce the number of classes. For instance we can create 3 classes instead of 7 with first class : poor quality (3 and 4) ; second class : average quality (4, 5 and 6) and third class : excellent quality (7 and 8). But this would simplify to much this classification task and this is not the point of this project.
+
 ###### Ensemble Methods 
+
+We also tried with ensemble methods that are well-known to give good results.
 
 ||AdaBoost Classifier | Gradient Boosting Classifier | Bagging Classifier |
 |-|----|------|------|
