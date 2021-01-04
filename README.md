@@ -150,6 +150,8 @@ To perform oversampling, we decide to use the _minority_ argument of the functio
 | Near Miss 1          |-     |-     |-     | -    | 0.32 |
 | Near Miss 3          |-     |-     |-     | -    | 0.57 |
 
+It seems that the random forest classifier is by far the most adapted model to deal with this dataset. Overall, the undersampling doesn't improve the f1-score. But let's take a closer look to the results with the confusion matrix.
+
 ##### Confusion matrix with the Random Forest Classifier
 
 Confusion matrix without resampling
@@ -218,6 +220,7 @@ After A randomized Grid Search Cross Validation with the two models that yield g
 | Near Miss 1           | 0.63  |
 | Near Miss 3           | 0.63  |
 
+In this case, the Tomek Links algorithm is improving the f1-score and as we will see below, it also improves the classification of the minority class. 
 
 Confusion matrix without resampling
 
