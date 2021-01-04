@@ -154,15 +154,14 @@ To perform oversampling, we decide to use the _minority_ argument of the functio
 
 - __Insurance dataset__
 
+Here we implement the same methods but note that we are not going under 33% because the ratio of class 1 compared to class 0 is 20% in the original dataset. 
+
 | Oversampling strategy | F1 score | Precision | Recall |
 |-                      |-         |-          |-       |
-| No oversampling       | 0.6746   | 0.8614    | 0.5549 |
-| Minority criterion    | 0.4978   | 0.3529    | 0.8489 |
-| Ratio = 0.5           | 0.7445   | 0.6713    | 0.8384 |  
-| Ratio = 0.33          | 0.7894   | 0.7567    | 0.8281 |
-| Ratio = 0.15          | 0.8136   | 0.8225    | 0.8077 |
-| Ratio = 0.11          | 0.8113   | 0.8345    | 0.7912 |
-| Ratio = 0.08          | 0.8091   | 0.8490    | 0.7753 |
+| No oversampling       | 0        | 0         | 0      |
+| Minority criterion    | 0.5096   | 0.3435    | 0.9864 |
+| Ratio = 0.5           | 0.5558   | 0.4040    | 0.8904 |  
+| Ratio = 0.33          | 0        | 0         | 0      |
 
 
 ### For undersampling strategies
