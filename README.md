@@ -41,7 +41,9 @@ https://www.kaggle.com/arashnic/imbalanced-data-practice
 
 ### Credit Card
 We have a dataset about credit card frauds with the data of 284797 individuals. There are only 482 frauds in this dataset, so the ration is close to 600:1. It is a binary problem where we have to find abnormal variables.
-Insurance claims
+
+
+### Insurance claims
 The goal with this dataset is to predict whether a client would be interested in vehicle insurance. It is a binary classification problem. We have information about demographics (gender, age, region code type), vehicles (Vehicle Age, Damage) and policy (Premium, sourcing channel) etc. The ratio is close to 5:1.
 
 
@@ -139,7 +141,8 @@ On all the following, we will use at first a _RandomForestClassifier_ to see how
 - __Credit card dataset__
 
 First, we get the 5 train and test set on which we will perform cross validation. Then we decide to run our model (_RandomForestClassifier_) on the data without using overampling to see what are the scores. This will be our basis to compare our other method with oversampling. Indeed, we want some better results than this one.  
-To perform oversampling, we decide to use the _minority_ argument of the function _RandomOverSample()_. This parameter duplicates observations of the minority class untill we obtain the same number of observation in each class. Note that we only duplicate observations of the train set and not of the test set. We obtain the following results:
+To perform oversampling, we decide to use the _minority_ argument of the function _RandomOverSample()_. This parameter duplicates observations of the minority class untill we obtain the same number of observation in each class. Note that we only duplicate observations of the train set and not of the test set. 
+Results presented below, correspond to the mean scores of our 5 splits. 
 
 | Oversampling strategy | F1 score | Precision | Recall |
 |-                      |-         |-          |-       |
@@ -151,6 +154,9 @@ To perform oversampling, we decide to use the _minority_ argument of the functio
 | Ratio = 0.11          | 0.8113   | 0.8345    | 0.7912 |
 | Ratio = 0.08          | 0.8091   | 0.8490    | 0.7753 |
 
+It is a bit surprising that we obtain some better results without oversampling than with the _minority_ criterion. Without oversampling, we have a high precision, which means that among observations predicted as class 1, we did not make a lot of misstakes. However we have a bad recall which implies that we have predicted only 55% of the minority class observations.  
+By fixing the _minority_ criterion, we observe the extreme opposite. We have well predicted 85% of the minority class observations but it is because we have predicted too many class 1 as we can see on the bad recall. This is due to the fact that too much weight is given to duplicated observations (as there are many of them).  
+Then for the different ratios, we achieve the best f1 score with a ratio of 15% (which means 15 observations of class 1 for 100 observations of class 0). We also observe that f1 score decreases after 15%.
 
 - __Insurance dataset__
 
