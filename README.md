@@ -189,19 +189,24 @@ After A randomized Grid Search Cross Validation with the two models that yield g
 | Near Miss 3           | 0.63  |
 
 
-Confusion matrix without resemapling
+Confusion matrix without resampling
+
 <img src="Img/CF.png" alt="CF" width="200">
 
 Confusion matrix with Tomek Links
+
 <img src="Img/CF_tl.png" alt="CF_tl" width="200">
 
 Confusion matrix with Near Miss 1
+
 <img src="Img/CF_nm1.png" alt="CF_nm1" width="200">
 
 Confusion matrix with Near Miss 3
+
 <img src="Img/CF_nm3.png" alt="CF_nm3" width="200">
 
 Confusion matrix with Random Undersampling
+
 <img src="Img/CF_rd.png" alt="CF_rd" width="200">
 
 
