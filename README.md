@@ -84,6 +84,10 @@ and to replace these points by their centroids. It is a way to lose less informa
 
 Illustration of the undersampling process in the Cluster Centroids algorithm
 
+### Near Miss algorithm
+
+Near Miss are undersampling methods that select examples based on the distance between majority class examples and minority class examples. NearMiss-1 selects points from the majority class that have the smallest average distance to the three closest points from the minority class. NearMiss-2 selects points from the majority class that have the smallest average distance to the three furthest points from the minority class. NearMiss-3 involves selecting a given number of majority class points for each point in the minority class that are closest.
+
 ### Cost-sensitive SVM
 
 The Support Vector Machine algorithm looks for an hyperplane which leads to the best separation between the classes. Without adjustments SVM are not very effective in the imbalanced case, but when the errors in the majority class are weighted more heavily we can get very satisfying results.
@@ -288,3 +292,5 @@ https://arxiv.org/pdf/1212.0975.pdf
 4. Masnadi-Shirazi, Vasconcelos and Iranmehr, Cost-sensitive Support Vector Machines, Journal of Machine Learning Research (2015)
 
 5. Krawczyk, B., Woźniak, M., Schaefer, G.: Cost-sensitive decision tree ensembles for effective imbalanced classification. Appl. Soft Comput. 14, 554–562 (2014)
+
+6. https://machinelearningmastery.com/undersampling-algorithms-for-imbalanced-classification/
