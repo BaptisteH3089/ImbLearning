@@ -68,9 +68,9 @@ The simplest way to do resampling is to do random resampling but in case of unde
 However there exists more sophisticated methods to lower the defaults of this method. A famous undersampling method is Tomek Links.
 It consists in creating pairs of points with each pair containing a point from the minority class and a point from the majority class. Then, we simply remove the points of the majority class on some pairs to reach the ratio we want. It gives a cleaner separation between the two classes and hopefully better results.
 
-<img src="Img/Img/TL_1.png" alt="TL" width="400">
+<img src="Img/TL_1.png" alt="TL" width="400">
 
-<img src="Img/Img/TL_2.png" alt="TL" width="400">
+<img src="Img/TL_2.png" alt="TL" width="400">
 
 Illustration of the undersampling process in the Tomek Links algorithms
 
@@ -142,7 +142,7 @@ To perform oversampling, we decide to use the _minority_ argument of the functio
 #### Credit Card Dataset
 
 | F1-score             | Logistic Regression | Decision Trees | Naive Bayes | KNN | Random Forest Classifier |
-|-|-|-|-|-|
+|-                     |-                    |-               |-            |-    |--------------------------|
 | Normal               | 0.83 | 0.88 | 0.63 | 0.60 | 0.92 |
 | Random undersampling |0.54  |0.49  | 0.60 |    - | 0.57 |
 | Cluster Centroids    |0.46  |-     |-     |  -   | 0.17 |
@@ -150,7 +150,13 @@ To perform oversampling, we decide to use the _minority_ argument of the functio
 | Near Miss 1          |-     |-     |-     | -    | 0.32 |
 | Near Miss 3          |-     |-     |-     | -    | 0.57 |
 
+### For cost-sensitive SVM
 
+| F1-score | Normal | Weighted 1:10 | Weighted 1:50 |
+|----------|--------|---------------|---------------|
+|          |0.50|0.77|0.80|
+
+#### Wine Quality Dataset
 
 ## Conclusion
 
