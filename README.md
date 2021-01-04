@@ -116,6 +116,11 @@ On the part of oversampling strategies, we have decided to perform cross validat
 
 On all the following, we will use at first a _RandomForestClassifier_ to see how our model perform according to oversampling strategy that we choose. Indeed, we are first more interested in the evolution of the f1_score on cross validation according to parameters of oversampling than the classifier itself. 
 
+- __Credit card dataset__
+
+First, we get the 5 train and test set on which we will perform cross validation. Then we decide to run our model (_RandomForestClassifier_) on the data without using overampling to see what are the scores. This will be our basis to compare our other method with oversampling. Indeed, we want some better results than this one.  
+To perform oversampling, we decide to use the _minority_ argument of the function _RandomOverSample()_. This parameter duplicates observations of the minority class untill we obtain the same number of observation in each class. Note that we only duplicate observations of the train set and not of the test set. 
+
 
 ## Conclusion
 
