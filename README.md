@@ -209,6 +209,8 @@ Confusion matrix with Random Undersampling
 
 <img src="Img/CF_rd.png" alt="CF_rd" width="200">
 
+We can see that with NM1 and NM3 even though the f1-score is worse than without resampling, we are predicting a lot better the True Positives. These methods are efficient. Tomek links and Random undersampling improve also the precision but less than NM algorithm.
+
 
 ## Conclusion
 
