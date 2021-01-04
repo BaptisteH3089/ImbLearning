@@ -158,6 +158,23 @@ To perform oversampling, we decide to use the _minority_ argument of the functio
 
 #### Wine Quality Dataset
 
+###### Classic Methods
+
+With this dataset we are in a case of multiclassification , so a more adapted metric is the accuracy, that simply measure the proportion of good classification.
+
+|              | Logistic Regression | Decision Trees | GaussianNB | SVC | Random Forest Classifier |
+|-             |-                    |-               |-            |-    |--------------------------|
+| accuracy     | 0.5382 | 0.5583 | 0.2815 | 0.5313 | 0.668 |
+
+###### Ensemble Methods 
+
+||AdaBoost Classifier | Gradient Boosting Classifier | Bagging Classifier |
+|-|----|------|------|
+|accuracy| 0.4416            |     0.5761          |  0.6427            |
+
+
+
+
 ## Conclusion
 
 ## Bibliography
