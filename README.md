@@ -139,6 +139,17 @@ To perform oversampling, we decide to use the _minority_ argument of the functio
 
 ### For undersampling strategies
 
+#### Credit Card Dataset
+
+| F1-score             | Logistic Regression | Decision Trees | Naive Bayes | KNN | Random Forest Classifier |
+|-|-|-|-|-|
+| Normal               | 0.83 | 0.88 | 0.63 | 0.60 | 0.92 |
+| Random undersampling |0.54  |0.49  | 0.60 |    - | 0.57 |
+| Cluster Centroids    |0.46  |-     |-     |  -   | 0.17 |
+| Tomek Links          |0.46  |0.87  | 0.63 | -    | 0.92 |
+| Near Miss 1          |-     |-     |-     | -    | 0.32 |
+| Near Miss 3          |-     |-     |-     | -    | 0.57 |
+
 
 
 ## Conclusion
