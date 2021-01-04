@@ -170,6 +170,12 @@ Here we implement the same methods but note that we are not going under 33% beca
 | Ratio = 0.5           | 0.5221   | 0.4946    | 0.5309 |  
 | Ratio = 0.33          | 0.4892   | 0.4989    | 0.5000 |
 
+We can see that our model is performing worse on this dataset than on the previous one. However we can observe some improvement in the different scores according to the oversampling strategy. The best strategy with this classifier is thus with the _minority_ criterion. 
+
+
+#### With SMOTE  
+
+
 
 ### For undersampling strategies
 
