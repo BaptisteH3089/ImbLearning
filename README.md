@@ -108,6 +108,15 @@ __Synthetic Minority Oversampling Technique__ is a method which consits in "crea
 
 ## Results obtained with each method on each dataset
 
+### For oversampling strategies  
+
+On the part of oversampling strategies, we have decided to perform cross validation on 5 train and test set that we have constructed by hand. Indeed, we wanted to have in each test set, the same proportion of observations of the minority class (i.e. 20%). We have chosen this way to evaluate our model because usual cross validation chooses at random observations (independantly of their class) to be in the test set, and so we could have some test sets with only majority class observations for example. 
+
+#### Using only basic oversampling  
+
+On all the following, we will use at first a _RandomForestClassifier_ to see how our model perform according to oversampling strategy that we choose. Indeed, we are first more interested in the evolution of the f1_score on cross validation according to parameters of oversampling than the classifier itself. 
+
+
 ## Conclusion
 
 ## Bibliography
