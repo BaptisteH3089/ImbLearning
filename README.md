@@ -135,18 +135,7 @@ On all the following, we will use at first a _RandomForestClassifier_ to see how
 - __Credit card dataset__
 
 First, we get the 5 train and test set on which we will perform cross validation. Then we decide to run our model (_RandomForestClassifier_) on the data without using overampling to see what are the scores. This will be our basis to compare our other method with oversampling. Indeed, we want some better results than this one.  
-To perform oversampling, we decide to use the _minority_ argument of the function _RandomOverSample()_. This parameter duplicates observations of the minority class untill we obtain the same number of observation in each class. Note that we only duplicate observations of the train set and not of the test set. We obtain the following results:
-
-| Oversampling strategy | F1 score   | Precision | Recall |
-|-                      |-           |-          |-       |
-| No oversampling       | 0.6746     | 0.8614    | 0.5549 |
-| Minority criterion    | 0.4978     | 0.3529    | 0.8489 |
-| Ratio = 0.5           | 0.7445     | 0.6713    | 0.8384 |  
-| Ratio = 0.33          | 0.7894     | 0.7567    | 0.8281 |
-| Ratio = 0.15          | __0.8136__ | 0.8225    | 0.8077 |
-| Ratio = 0.11          | 0.8113     | 0.8345    | 0.7912 |
-| Ratio = 0.08          | 0.8091     | 0.8490    | 0.7753 |
-
+To perform oversampling, we decide to use the _minority_ argument of the function _RandomOverSample()_. This parameter duplicates observations of the minority class untill we obtain the same number of observation in each class. Note that we only duplicate observations of the train set and not of the test set. 
 
 ### For undersampling strategies
 
@@ -191,22 +180,29 @@ After A randomized Grid Search Cross Validation with the two models that yield g
 
 #### Insurance Claims Dataset
 
-| F1-score             | Logistic Regression | Decision Trees  | Random Forest Classifier |
-|-                     |-                    |-                |--------------------------|
-| Normal               | 0.                | 0.                |  0.68 |
-| Random undersampling |0.                |0.                  |  |
-| Cluster Centroids    |0.               |-                    |  |
-| Tomek Links          |0.               |0.                   | 0.71 |
-| Near Miss 1          |-                   |-                 |  |
-| Near Miss 3          |-                   |-                 |  |
+| F1-score              | Random Forest Classifier |
+|-----------------------|--------------------------|
+| Normal                | 0.68  |
+| Random undersampling  | 0.68  |
+| Tomek Links           | 0.71  |
+| Near Miss 1           | 0.63  |
+| Near Miss 3           | 0.63  |
 
 
-<img src="Img/CF.png" alt="CF" width="300">
+Confusion matrix without resemapling
+<img src="Img/CF.png" alt="CF" width="200">
 
+Confusion matrix with Tomek Links
+<img src="Img/CF_tl.png" alt="CF_tl" width="200">
 
-<img src="Img/CF_tl.png" alt="CF_tl" width="300">
+Confusion matrix with Near Miss 1
+<img src="Img/CF_nm1.png" alt="CF_nm1" width="200">
 
-<img src="Img/loss_fcn.png" alt="loss function" width="300">
+Confusion matrix with Near Miss 3
+<img src="Img/CF_nm3.png" alt="CF_nm3" width="200">
+
+Confusion matrix with Random Undersampling
+<img src="Img/CF_rd.png" alt="CF_rd" width="200">
 
 
 ## Conclusion
