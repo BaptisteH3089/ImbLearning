@@ -158,9 +158,9 @@ To perform oversampling, we decide to use the _minority_ argument of the functio
 
 #### Wine Quality Dataset
 
-###### Classic Methods
-
 With this dataset we are in a case of multiclassification , so a more adapted metric is the accuracy, that simply measure the proportion of good classification.
+
+###### Classic Methods
 
 |              | Logistic Regression | Decision Trees | GaussianNB | SVC | Random Forest Classifier |
 |-             |-                    |-               |-            |-    |--------------------------|
@@ -172,7 +172,11 @@ With this dataset we are in a case of multiclassification , so a more adapted me
 |-|----|------|------|
 |accuracy| 0.4416            |     0.5761          |  0.6427            |
 
+After A randomized Grid Search Cross Validation with the two models that yield good results
 
+|  |Random Forest Classifier | Bagging Classifier |
+|-|----|------|
+|accuracy| 0.675 | 0.65 |
 
 
 ## Conclusion
