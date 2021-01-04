@@ -150,6 +150,27 @@ To perform oversampling, we decide to use the _minority_ argument of the functio
 | Near Miss 1          |-     |-     |-     | -    | 0.32 |
 | Near Miss 3          |-     |-     |-     | -    | 0.57 |
 
+
+Confusion matrix without resampling
+
+<img src="Img/CF_CC.png" alt="CF" width="200">
+
+Confusion matrix with Tomek Links
+
+<img src="Img/CF_CC_tl.png" alt="CF_CC_tl" width="200">
+
+Confusion matrix with Near Miss 1
+
+<img src="Img/CF_CC_nm1.png" alt="CF_CC_nm1" width="200">
+
+Confusion matrix with Near Miss 3
+
+<img src="Img/CF_CC_nm3.png" alt="CF_CC_nm3" width="200">
+
+Confusion matrix with Random Undersampling
+
+<img src="Img/CF_CC_rd.png" alt="CF_CC_rd" width="200">
+
 ### For cost-sensitive SVM
 
 | F1-score | Normal | Weighted 1:10 | Weighted 1:50 |
