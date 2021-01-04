@@ -150,6 +150,7 @@ To perform oversampling, we decide to use the _minority_ argument of the functio
 | Near Miss 1          |-     |-     |-     | -    | 0.32 |
 | Near Miss 3          |-     |-     |-     | -    | 0.57 |
 
+##### Confusion matrix with the Random Forest Classifier
 
 Confusion matrix without resampling
 
