@@ -157,6 +157,7 @@ Results presented below, correspond to the mean scores of our 5 splits.
 It is a bit surprising that we obtain some better results without oversampling than with the _minority_ criterion. Without oversampling, we have a high precision, which means that among observations predicted as class 1, we did not make a lot of misstakes. However we have a bad recall which implies that we have predicted only 55% of the minority class observations.  
 By fixing the _minority_ criterion, we observe the extreme opposite. We have well predicted 85% of the minority class observations but it is because we have predicted too many class 1 as we can see on the bad recall. This is due to the fact that too much weight is given to duplicated observations (as there are many of them).  
 Then for the different ratios, we achieve the best f1 score with a ratio of 15% (which means 15 observations of class 1 for 100 observations of class 0). We also observe that f1 score decreases after 15%.
+We can conclude that for this dataset with this classifier, the best oversampling strategy is to choose a ratio of __15%__.
 
 - __Insurance dataset__
 
