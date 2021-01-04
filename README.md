@@ -175,7 +175,13 @@ We can see that our model is performing worse on this dataset than on the previo
 
 #### With SMOTE  
 
-
+| Strategy             | F1 score | Precision | Recall |
+|-                     |-         |-          |-       |
+| SMOTE only           | 0.7845   | 0.7454    | 0.8302 |
+| SMOTE=0.1 Under=0.5  | 0.7339   | 0.6548    | 0.8365 |
+| SMOTE=0.2 Under=0.3  | 0.8081   | 0.8052    | 0.8138 |  
+| SMOTE=0.2 Under=0.2  | 0.8101   | 0.8070    | 0.8159 |
+| SMOTE=0.18 Under=0.19| 0.8085   | 0.8077    | 0.8117 |
 
 ### For undersampling strategies
 
