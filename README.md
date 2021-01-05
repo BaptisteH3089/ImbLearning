@@ -175,6 +175,11 @@ We can see that our model is performing worse on this dataset than on the previo
 
 #### With SMOTE  
 
+As before, we implement some oversampling strategies but using SMOTE this time. First we use SMOTE only with no parameter which, by default use the _minority_ criterion. Then, since documentation on SMOTE advises to combine SMOTE and __undersampling__, we perform it with different parameters. When setting a float parameter in SMOTE, it acts like in the oversampling function, i.e. creating new observation untill we reach the wanted ratio.
+On the table below, you can find these strategies and the results obtained where rows combining SMOTE and undersampling are of the form: SMOTE=parameter_smote Under=parameter_undersampling. 
+
+- __Credit card dataset__
+
 | Strategy             | F1 score | Precision | Recall |
 |-                     |-         |-          |-       |
 | SMOTE only           | 0.7845   | 0.7454    | 0.8302 |
@@ -182,6 +187,23 @@ We can see that our model is performing worse on this dataset than on the previo
 | SMOTE=0.2 Under=0.3  | 0.8081   | 0.8052    | 0.8138 |  
 | SMOTE=0.2 Under=0.2  | 0.8101   | 0.8070    | 0.8159 |
 | SMOTE=0.18 Under=0.19| 0.8085   | 0.8077    | 0.8117 |
+
+Results obtained on this dataset are interesting. However the best f1 score is not higher than the best f1 score of basic oversampling strategies. We could probably gain a bit of performance by combining other parameters, but result obtained with the strategy SMOTE=0.2 and Undersampling=0.2 seems to be quite good.  
+
+
+- __Insurance dataset__
+
+We do the same for the insurance dataset and have the following results:
+
+| Strategy             | F1 score | Precision | Recall |
+|-                     |-         |-          |-       |
+| SMOTE only           | 0.4867   | 0.3420    | 0.8466 |
+| SMOTE=0.1 Under=0.5  | 0.7379   | 0.6608    | 0.8384 |
+| SMOTE=0.2 Under=0.3  | 0.7936   | 0.7664    | 0.8263 |  
+| SMOTE=0.2 Under=0.2  | 0.8074   | 0.7664    | 0.8138 |
+| SMOTE=0.18 Under=0.19| 0.8118   | 0.8104    | 0.8159 |
+
+Here we can see that compared to basic oversampling strategies, we obtain some really good results. Indeed, when with basic oversampling the highest f1 score was 0.5258, here we obtain a f1 score of 0.8118 with the following strategy: SMOTE=0.18 and Undersampling=0.19. This is a really great improvement that illustrate the power of SMOTE.  
 
 ### For undersampling strategies
 
