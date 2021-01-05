@@ -209,6 +209,8 @@ In conclusion, SMOTE seems to work well on dataset for which basic oversampling 
 
 ### For undersampling strategies
 
+In this part the f1-score refers to the macro average f1-score which is obtained with the function classification_report of the scikit-learn package. It is the unweighted average of the f1-score obtained for each label.
+
 #### Credit Card Dataset
 
 | F1-score             | Logistic Regression | Decision Trees | Naive Bayes | KNN | Random Forest Classifier |
