@@ -136,7 +136,7 @@ On the part of oversampling strategies, we have decided to perform cross validat
 
 #### Using only basic oversampling  
 
-On all the following, we will use at first a _RandomForestClassifier_ to see how our model perform according to oversampling strategy that we choose. Indeed, we are first more interested in the evolution of the f1_score on cross validation according to parameters of oversampling than the classifier itself. 
+On all the following, we will use a _RandomForestClassifier_ to see how our model perform according to oversampling strategy that we choose. Indeed, we are first more interested in the evolution of the f1_score on cross validation according to parameters of oversampling than the classifier itself. We did not try to tune parameters of the classifiers and arbitrarily chose some limiting parameters (as max_depth for the trees) in order to have a fast computational time since cross validation with different strategies is time consuming.  
 
 - __Credit card dataset__
 
@@ -203,7 +203,9 @@ We do the same for the insurance dataset and have the following results:
 | SMOTE=0.2 Under=0.2  | 0.8074   | 0.7664    | 0.8138 |
 | SMOTE=0.18 Under=0.19| 0.8118   | 0.8104    | 0.8159 |
 
-Here we can see that compared to basic oversampling strategies, we obtain some really good results. Indeed, when with basic oversampling the highest f1 score was 0.5258, here we obtain a f1 score of 0.8118 with the following strategy: SMOTE=0.18 and Undersampling=0.19. This is a really great improvement that illustrate the power of SMOTE.  
+Here we can see that compared to basic oversampling strategies, we obtain some really good results. Indeed, when with basic oversampling the highest f1 score was 0.5258, here we obtain a f1 score of 0.8118 with the following strategy: SMOTE=0.18 and Undersampling=0.19. This is a really great improvement that illustrates the power of SMOTE.  
+
+In conclusion, SMOTE seems to work well on dataset for which basic oversampling strategies have failed. However we still obtain good results on dataset where oversampling strategies were already efficient. 
 
 ### For undersampling strategies
 
