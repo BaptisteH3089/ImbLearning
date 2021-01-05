@@ -228,31 +228,31 @@ It seems that the random forest classifier is by far the most adapted model to d
 
 Confusion matrix without resampling
 
-<img src="Img/CF_CC.png" alt="CF" width="200">
+<img src="Img/CF_CC.png" alt="CF" width="350">
 
 Confusion matrix with Tomek Links
 
-<img src="Img/CF_CC_tl.png" alt="CF_CC_tl" width="200">
+<img src="Img/CF_CC_tl.png" alt="CF_CC_tl" width="350">
 
 Confusion matrix with Near Miss 1
 
-<img src="Img/CF_CC_nm1.png" alt="CF_CC_nm1" width="200">
+<img src="Img/CF_CC_nm1.png" alt="CF_CC_nm1" width="350">
 
 Confusion matrix with Near Miss 3
 
-<img src="Img/CF_CC_nm3.png" alt="CF_CC_nm3" width="200">
+<img src="Img/CF_CC_nm3.png" alt="CF_CC_nm3" width="350">
 
 Confusion matrix with Random Undersampling
 
-<img src="Img/CF_CC_rd.png" alt="CF_CC_rd" width="200">
+<img src="Img/CF_CC_rd.png" alt="CF_CC_rd" width="350">
 
 These confusion matrix show us that even though the Tomek Links method gives a good f1-score, it does not improve much the classification on the minority class, whereas the Near Miss version 1 and 3 are improving a bit the proportion of True Positives.
 
 ### For cost-sensitive SVM
 
-| F1-score | Normal | Weighted 1:10 | Weighted 1:50 |
+| -        | Normal | Weighted 1:10 | Weighted 1:50 |
 |----------|--------|---------------|---------------|
-|          |0.50|0.77|0.80|
+|  F1-score |0.50|0.77|0.80|
 
 The cost-sensitive SVM also yield good results. The results are better as we increase the weight on the minority class but it takes a lot of time. That's why we stop at the ratio 1:50
 
@@ -296,23 +296,23 @@ In this case, the Tomek Links algorithm is improving the f1-score and as we will
 
 Confusion matrix without resampling
 
-<img src="Img/CF.png" alt="CF" width="200">
+<img src="Img/CF.png" alt="CF" width="350">
 
 Confusion matrix with Tomek Links
 
-<img src="Img/CF_tl.png" alt="CF_tl" width="200">
+<img src="Img/CF_tl.png" alt="CF_tl" width="350">
 
 Confusion matrix with Near Miss 1
 
-<img src="Img/CF_nm1.png" alt="CF_nm1" width="200">
+<img src="Img/CF_nm1.png" alt="CF_nm1" width="350">
 
 Confusion matrix with Near Miss 3
 
-<img src="Img/CF_nm3.png" alt="CF_nm3" width="200">
+<img src="Img/CF_nm3.png" alt="CF_nm3" width="350">
 
 Confusion matrix with Random Undersampling
 
-<img src="Img/CF_rd.png" alt="CF_rd" width="200">
+<img src="Img/CF_rd.png" alt="CF_rd" width="350">
 
 We can see that with NM1 and NM3 even though the f1-score is worse than without resampling, we are predicting a lot better the True Positives. This has a price because it increase a lot the number of False Positives. The last two methods are quite efficient to improve the score on the minority class. Tomek links and Random undersampling improve also the precision but less than NM algorithm.
 
