@@ -296,7 +296,7 @@ In this case, the Tomek Links algorithm is improving the f1-score and as we will
 
 Confusion matrix without resampling
 
-<img src="Img/CF.png" alt="CF" width="350">
+<img src="Img/CF.png" alt="CF" width="450">
 
 Confusion matrix with Tomek Links
 
@@ -308,7 +308,7 @@ Confusion matrix with Near Miss 1
 
 Confusion matrix with Near Miss 3
 
-<img src="Img/CF_nm3.png" alt="CF_nm3" width="350">
+<img src="Img/CF_nm3.png" alt="CF_nm3" width="450">
 
 Confusion matrix with Random Undersampling
 
